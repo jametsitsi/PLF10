@@ -410,14 +410,14 @@ switch:
     disabled_by_default: $disable_entities
     icon: mdi:toggle-switch-off-outline
     restore_mode: RESTORE_DEFAULT_ON
-    on_turn_on:
-      - lambda: |-
-          id(kauf_api).set_reboot_timeout(0);  // 0 disables auto rebooting and also new status led blinking.  doesn't stop current status led blinking
-          id(kauf_api).status_clear_warning(); // stops current status led blinking, timeout 0 keeps it from restarting
-      - script.execute: script_save_changes
-    on_turn_off:
-      - lambda: id(kauf_api).set_reboot_timeout(900000);
-      - script.execute: script_save_changes
+    # on_turn_on:
+    #   - lambda: |-
+    #       id(kauf_api).set_reboot_timeout(0);  // 0 disables auto rebooting and also new status led blinking.  doesn't stop current status led blinking
+    #       id(kauf_api).status_clear_warning(); // stops current status led blinking, timeout 0 keeps it from restarting
+    #   - script.execute: script_save_changes
+    # on_turn_off:
+    #   - lambda: id(kauf_api).set_reboot_timeout(900000);
+    #   - script.execute: script_save_changes
     forced_hash: 657159011
     forced_addr: 42
     global_addr: global_forced_addr
