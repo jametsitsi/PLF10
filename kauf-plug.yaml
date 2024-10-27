@@ -179,8 +179,8 @@ logger:
 
 
 # https://esphome.io/components/api.html
-api:
-  id: kauf_api
+# api:
+#   id: kauf_api
 
 
 # https://esphome.io/components/ota.html
