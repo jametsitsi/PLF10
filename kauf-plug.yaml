@@ -482,9 +482,9 @@ button:
 
 # clock input from Home Assistant used to calculate total daily energy
 # https://esphome.io/components/time.html#home-assistant-time-source
-time:
-  - platform: homeassistant
-    id: homeassistant_time
+# time:
+#   - platform: homeassistant
+#     id: homeassistant_time
 
 
 # https://esphome.io/components/sensor/index.html
